@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body{
+    background-color:rgb(198, 198, 198);
+}
+
+button{
+    margin-left: 20px;
+    margin-top: 50px;
+    font-size: 18px;
+    line-height: 60px;
+    width: 10rem;
+    border-radius: 5px;
+    border: none;
+}
+
+button:hover{
+    background-color: lightcyan;
+}
+
+button:active{
+    background-color:lightgreen;
+}
+
+.toastBox{
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.toastStyle{
+    height: 50px;
+    width: 320px;
+    font-weight: 600;
+    margin: 10px 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    font-family: "Open Sans", sans-serif;
+    position: relative;
+    border-radius: 2px;
+    transform: translateX(100%);
+    animation: kool 0.5s linear forwards;
+}
+
+@keyframes kool{
+    100%{
+        transform: translateX(0);
+    }
+}
+.toastStyle i {
+    color: green;
+    margin: 0 20px;
+    font-size: 30px;
+}
+
+.toastStyle.error i {
+    color: red;
+}
+
+.toastStyle.Invalid i{
+    color: orange;
+}
+
+.toastStyle::after{
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: green;
+    animation: cool 6s linear forwards;
+}
+
+@keyframes cool{
+    100%{
+        width: 0;
+    }
+}
+
+.toastStyle.error::after{
+    background-color: red;
+}
+.toastStyle.Invalid::after{
+    background-color: orange;
+}
