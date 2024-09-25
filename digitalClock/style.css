@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin: 10rem auto;
+  background: black;
+  overflow: hidden;
+}
+
+:root {
+  --textColor: rgb(10, 155, 10);
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid rgb(95, 93, 93);
+  padding: 1rem;
+  border-radius: 6px;
+  /* box-shadow: 3px 2px 5px rgb(252, 230, 230); */
+  /* border: none; */
+}
+
+.container {
+  width: 56.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.time {
+  height: 100%;
+  width: 17.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14rem;
+  font-weight: 700;
+  color: var(--textColor);
+  text-shadow: 3px 2px 5px rgb(252, 230, 230);
+}
+
+span {
+  font-size: 6rem;
+  font-weight: 900;
+  color: var(--textColor);
+}
+
+.day h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--textColor);
+}
+
+.fullDate {
+  font-size: 2rem;
+  width: 17.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  color: var(--textColor);
+}
+
+@media (max-width: 970px) {
+  html {
+    font-size: 80%;
+  }
+  /* .container{
+    width: 50rem;
+  } */
+}
+
+@media (max-width: 780px) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media (max-width: 590px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media (max-width: 420px) {
+  body {
+    margin: 2rem 0;
+  }
+
+  html {
+    font-size: 60%;
+  }
+  .container {
+    flex-direction: column;
+    width: 30rem;
+  }
+
+  .container span {
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 392px) {
+  html {
+    font-size: 54%;
+  }
+}
+
+@media (max-width: 330px) {
+  html {
+    font-size: 35%;
+  }
+}
+
+@media (max-width: 170px) {
+  html {
+    font-size: 18%;
+  }
+
+  body {
+    margin-top: 10rem;
+  }
+  .container {
+    flex-direction: row;
+    width: 50rem;
+  }
+
+  .container span {
+    transform: rotate(0);
+  }
+
+  .time {
+    text-shadow: none;
+  }
+}
