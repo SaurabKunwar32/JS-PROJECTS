@@ -45,4 +45,6 @@ let updateData = () => {
   months.innerText = monthNames[current.getMonth()];
 };
 
+updateData();
+
 setInterval(updateData, 1000);
